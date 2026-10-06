@@ -69,6 +69,79 @@ Las rutas de la aplicación utilizan el siguiente prefijo:
 /api
 ```
 
+Endpoints
+GET - Obtener usuarios
+
+Obtiene todos los usuarios almacenados.
+
+GET http://localhost:3000/api/
+POST - Crear usuario
+
+Permite crear un nuevo usuario.
+
+POST http://localhost:3000/api/save
+
+Los datos se envían en formato JSON dentro del body de la petición.
+
+Ejemplo:
+
+{
+  "id": 1
+}
+
+Los datos son validados antes de ser almacenados.
+
+PUT - Actualizar usuario
+
+Permite actualizar un usuario existente utilizando su id.
+
+PUT http://localhost:3000/api/put/1
+
+El 1 corresponde al id del usuario que se desea actualizar.
+
+Los nuevos datos se envían en formato JSON dentro del body.
+
+Ejemplo:
+
+{
+  "id": 1
+}
+
+Si el usuario no existe, la API devuelve:
+
+404 Not Found
+DELETE - Eliminar usuario
+
+Permite eliminar un usuario utilizando su id.
+
+DELETE http://localhost:3000/api/delete/1
+
+El 1 corresponde al id del usuario que se desea eliminar.
+
+Si el usuario no existe, la API devuelve:
+
+404 Not Found
+Resumen de endpoints
+Método	Endpoint	Función
+GET	/api/	Obtener usuarios
+POST	/api/save	Crear usuario
+PUT	/api/put/:id	Actualizar usuario
+DELETE	/api/delete/:id	Eliminar usuario
+Ejecutar el proyecto
+
+Instalar las dependencias:
+
+npm install
+
+Iniciar el servidor:
+
+node app.js
+
+Servidor:
+
+http://localhost:3000
+
+
 Los endpoints disponibles se documentarán aquí a medida que se agreguen las diferentes rutas del proyecto.
 
 ## Autor
