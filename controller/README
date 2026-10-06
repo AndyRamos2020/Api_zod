@@ -1,0 +1,75 @@
+# API REST de Usuarios
+
+API REST desarrollada con Node.js y Express para gestionar información de usuarios mediante diferentes endpoints.
+
+## Tecnologías utilizadas
+
+* Node.js
+* Express.js
+* JavaScript
+* Zod
+
+## Funcionalidades
+
+La API permite realizar operaciones sobre usuarios:
+
+* Consultar usuarios.
+* Crear nuevos usuarios.
+* Actualizar usuarios existentes.
+* Eliminar usuarios.
+* Validar los datos recibidos.
+* Manejar errores mediante códigos de estado HTTP.
+
+## Validación
+
+Los datos enviados a la API son validados mediante un esquema antes de ser almacenados o utilizados.
+
+La validación utiliza `safeParse()` para comprobar si la información recibida cumple con las reglas definidas en el modelo.
+
+## Almacenamiento
+
+Actualmente, los usuarios se almacenan temporalmente en un arreglo en memoria:
+
+```js
+const usuarios = [];
+```
+
+Esto significa que los datos se pierden cuando el servidor se reinicia.
+
+## Códigos HTTP utilizados
+
+| Código | Descripción                       |
+| ------ | --------------------------------- |
+| `200`  | Solicitud procesada correctamente |
+| `201`  | Datos creados correctamente       |
+| `400`  | Datos enviados no válidos         |
+| `404`  | Usuario no encontrado             |
+| `500`  | Error interno del servidor        |
+
+## Endpoints
+
+Los endpoints se documentarán según las rutas definidas en el proyecto.
+
+## Instalación
+
+```bash
+git clone URL_DEL_REPOSITORIO
+cd NOMBRE_DEL_PROYECTO
+npm install
+```
+
+## Ejecución
+
+```bash
+node app.js
+```
+
+El servidor se ejecutará en:
+
+```text
+http://localhost:3000
+```
+
+## Autor
+
+Andy Ramos
